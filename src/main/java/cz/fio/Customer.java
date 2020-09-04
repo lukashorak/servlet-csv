@@ -44,4 +44,13 @@ public class Customer {
     public int hashCode() {
         return Objects.hash(firstName, lastName, email);
     }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
