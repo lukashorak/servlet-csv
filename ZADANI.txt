@@ -1,0 +1,27 @@
+Ukol:
+=====
+
+V balicku mate pripraveny jednoduchy web projekt buildovany mavenom. Ak Vam vyhovuje iny sposob
+buildu aplikacie, pouzite ho, sposob buildovania nas nezaujima. Tiez neziskate ziadne plusove body
+ani za prepis do spring-boot+controller alebo nejakeho ineho frameworku. 
+
+Nakolko sme v minulosti mali kandidata, ktory nam tvrdil, ze na ulohe pracoval 2 dni, prosim netravte nad ulohou viac ako 2 hodiny
+a vysledok nam odoslite, ked budete s vysledkom spokojny. 
+
+Doplnte do tridy cz.fio.StoreContact implementaci, ktora nacita parametre firstName, lastName a email 
+z HTTP GET requestu a prida riadok na koniec CSV suboru v tom pripade, ze riadok s rovnakym obsahom v subore este neexistuje. 
+CSV subor by sa mal dat otvorit v beznom office balicku a mal by mat kodovani windows-1250, oddelovac zaznamu znak ','
+a mal by byt je umistnen v systemovom temp adresari pod nazvom "contacts.csv".
+
+Mozete pouzit akekolvek volne siritelne kniznice a frameworky z maven repozitara, ktore vam ulahcia pracu.
+
+Priklad vstupu:
+http://localhost:8080/test-javista/contact?firstName=jmeno&lastName=pří­jmení­&email=email@email.cz
+http://localhost:8080/test-javista/contact?firstName=Franta&lastName=Novák&email=franta.novak@email.cz
+
+Priklad vystupu:
+==========
+jmeno,pří­jmení­,email@email.cz
+Franta,Novák,franta.novak@email.cz
+==========
+
